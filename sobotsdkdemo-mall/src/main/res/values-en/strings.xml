@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sobot_demo_person_set_value">User basic information（optional）</string>
+    <string name="sobot_demo_start_set_value">Startup parameters（AppKey required）</string>
+    <string name="sobot_demo_product_set_value">Advisory information settings（optional）</string>
+    <string name="sobot_demo_starting_value">Start SDK</string>
+
+    <string name="sobot_demo_app_name">智齿_Mall_demo</string>
+    <string name="sobot_demo_please">SOBOT SDK  2.4.0</string>
+    <string name="sobot_start_message_center">start message center</string>
+    <string name="sobot_clear_message_center">clear message center</string>
+</resources>

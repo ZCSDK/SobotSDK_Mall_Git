@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="用户信息设置"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="用户电话："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_tel"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户电话"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="用户昵称："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_uName"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户昵称"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="用户邮箱："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_email"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户邮箱"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="用户姓名："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_realName"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户姓名"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="QQ 帐 号："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_qq"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户QQ"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="用户头像："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_face"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户头像。必须是有效连接"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="用户备注："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_reMark"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户备注"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="来源页标题："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_visitTitle"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户来源页标题"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="来源页链接："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_visitUrl"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户来源页链接"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="自定义属性1："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_key1"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户来源页链接"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/sobot_person_set_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="自定义属性2："/>
+
+                <EditText
+                    android:id="@+id/sobot_person_key2"
+                    style="@style/sobot_person_set_edittext_style"
+                    android:hint="请输入用户来源页链接"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

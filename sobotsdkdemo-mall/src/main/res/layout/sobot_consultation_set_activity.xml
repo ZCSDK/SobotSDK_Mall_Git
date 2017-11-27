@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="咨询信息设置"
+        android:textColor="#000000"
+        android:textSize="18sp"/>
+
+    <CheckBox
+        android:id="@+id/sobot_goods_is_show_info"
+        style="@style/sobot_checkbox_style"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="是否显示咨询信息"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题："
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/sobot_goods_title"
+            style="@style/sobot_product_se_edittext_style"
+            android:layout_marginLeft="42dp"
+            android:hint="请输入标题"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="摘要："
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/sobot_goods_describe"
+            style="@style/sobot_product_se_edittext_style"
+            android:layout_marginLeft="42dp"
+            android:hint="请输入摘要"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签："
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/sobot_goods_lable"
+            style="@style/sobot_product_se_edittext_style"
+            android:layout_marginLeft="42dp"
+            android:hint="请输入标签"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图片Url："
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/sobot_goods_imgUrl"
+            style="@style/sobot_product_se_edittext_style"
+            android:layout_marginLeft="25dp"
+            android:hint="请输入图片地址"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送内容："
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/sobot_goods_fromUrl"
+            style="@style/sobot_product_se_edittext_style"
+            android:layout_marginLeft="15dp"
+            android:hint="请输入发送内容"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="如果添加咨询信息，标题和发送内容必须添加，否则不显示"
+        android:textColor="#555555"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:text="默认不设置咨询信息。这里是布局中的默认值"
+        android:textColor="#555555"/>
+</LinearLayout>

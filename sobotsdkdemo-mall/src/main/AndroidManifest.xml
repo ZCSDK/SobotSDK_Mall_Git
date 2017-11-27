@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.sobot.mall.demo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/sobot_demo_logo"
+        android:label="@string/sobot_demo_app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name="com.sobot.mall.demo.SobotDemoActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sobot.mall.demo.SobotPersonSetActivity"/>
+        <activity android:name="com.sobot.mall.demo.SobotConsultationSetActivity"/>
+        <activity android:name="com.sobot.mall.demo.SobotStartSetActivity"/>
+    </application>
+
+</manifest>
