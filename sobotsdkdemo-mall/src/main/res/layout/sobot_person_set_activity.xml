@@ -1,228 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sobot="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:text="用户信息设置"
-        android:textColor="#000000"
-        android:textSize="18sp"/>
+    <include layout="@layout/sobot_demo_layout_titlebar" />
 
     <ScrollView
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:background="#F0EFF5"
             android:orientation="vertical">
 
-            <LinearLayout
+            <View style="@style/custom_full_divide_line" />
+
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_tel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="-"
+                sobot:display_type="2"
+                sobot:isInputInt="true"
+                sobot:left_text="电话"
+                sobot:left_text_width="80dp"
+                sobot:maxLength="40"
+                sobot:mid_hint="请输入电话" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="用户电话："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_tel"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户电话"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_uName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="-"
+                sobot:display_type="2"
+                sobot:left_text="昵称"
+                sobot:left_text_width="80dp"
+                sobot:maxLength="40"
+                sobot:mid_hint="请输入昵称"
+                sobot:old_str="" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="用户昵称："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_uName"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户昵称"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="-"
+                sobot:display_type="2"
+                sobot:left_text="邮箱"
+                sobot:left_text_width="80dp"
+                sobot:maxLength="40"
+                sobot:mid_hint="请输入邮箱" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="用户邮箱："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_email"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户邮箱"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_realName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="-"
+                sobot:display_type="2"
+                sobot:left_text="姓名"
+                sobot:left_text_width="80dp"
+                sobot:maxLength="40"
+                sobot:mid_hint="请输入姓名" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="用户姓名："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_realName"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户姓名"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_qq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="-"
+                sobot:display_type="2"
+                sobot:isInputInt="true"
+                sobot:left_text="QQ"
+                sobot:left_text_width="80dp"
+                sobot:maxLength="40"
+                sobot:mid_hint="请输入QQ" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="QQ 帐 号："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_qq"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户QQ"/>
-            </LinearLayout>
-
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_face"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="-"
+                sobot:display_type="2"
+                sobot:left_text="头像"
+                sobot:left_text_width="80dp"
+                sobot:mid_hint="用户头像必须是有效链接" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="用户头像："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_face"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户头像。必须是有效连接"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_reMark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="备注"
+                sobot:display_type="2"
+                sobot:hintColor="#c9c9c9"
+                sobot:isShowArrow="true"
+                sobot:left_text="备注"
+                sobot:left_text_width="80dp"
+                sobot:mid_hint="请输入备注" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="用户备注："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_reMark"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户备注"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_visitTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="备注"
+                sobot:display_type="2"
+                sobot:hintColor="#c9c9c9"
+                sobot:isShowArrow="true"
+                sobot:left_text="来源页标题"
+                sobot:left_text_width="80dp"
+                sobot:mid_hint="请输入来源页标题" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="来源页标题："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_visitTitle"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户来源页标题"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_visitUrl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="备注"
+                sobot:display_type="2"
+                sobot:hintColor="#c9c9c9"
+                sobot:isShowArrow="true"
+                sobot:left_text="来源页链接"
+                sobot:left_text_width="80dp"
+                sobot:mid_hint="请输入来源页链接" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="来源页链接："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_visitUrl"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户来源页链接"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_key1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="备注"
+                sobot:display_type="2"
+                sobot:hintColor="#c9c9c9"
+                sobot:isShowArrow="true"
+                sobot:left_text="自定义属性1"
+                sobot:left_text_width="80dp"
+                sobot:mid_hint="请输入自定义属性1" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="自定义属性1："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_key1"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户来源页链接"/>
-            </LinearLayout>
-
-            <LinearLayout
+            <com.sobot.demo.SettingItemView
+                android:id="@+id/sobot_person_key2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                sobot:default_str="备注"
+                sobot:display_type="2"
+                sobot:hintColor="#c9c9c9"
+                sobot:isShowArrow="true"
+                sobot:left_text="自定义属性2"
+                sobot:left_text_width="80dp"
+                sobot:mid_hint="请输入自定义属性2" />
 
-                <TextView
-                    style="@style/sobot_person_set_textview_style"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:text="自定义属性2："/>
+            <View style="@style/custom_short_divide_line" />
 
-                <EditText
-                    android:id="@+id/sobot_person_key2"
-                    style="@style/sobot_person_set_edittext_style"
-                    android:hint="请输入用户来源页链接"/>
-            </LinearLayout>
         </LinearLayout>
+
     </ScrollView>
+
 </LinearLayout>
