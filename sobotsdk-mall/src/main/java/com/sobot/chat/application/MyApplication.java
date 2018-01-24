@@ -1,6 +1,5 @@
 package com.sobot.chat.application;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Application;
 import android.os.Environment;
@@ -12,7 +11,6 @@ import java.lang.Thread.UncaughtExceptionHandler;
 import java.util.LinkedList;
 import java.util.List;
 
-@SuppressLint("SetJavaScriptEnabled")
 public class MyApplication extends Application {
 
 	private List<Activity> activityList = new LinkedList<Activity>();

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/sobot_sv_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EFF3FA"
     android:fillViewport="true">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:id="@+id/sobot_post_msg_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:orientation="vertical">
@@ -18,12 +19,11 @@
             android:id="@+id/sobot_tv_post_msg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:lineSpacingExtra="5dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="你好"
+            tools:text="你好"
             android:textColor="#8B98AD"
             android:textSize="@dimen/sobot_listview_remind_text_size" />
 

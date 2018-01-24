@@ -24,10 +24,7 @@
         android:smallScreens="true"
         android:xlargeScreens="true" />
 
-    <application
-        android:allowBackup="true">
-
-        <!-- 主界面 -->
+    <application>
         <activity
             android:name="com.sobot.chat.activity.SobotChatActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -72,6 +69,16 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.sobot.chat.activity.SobotPostCategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotQueryFromActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/sobot_AppTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.sobot.chat.activity.SobotChooseCityActivity"
             android:screenOrientation="portrait"
             android:theme="@style/sobot_AppTheme"
             android:windowSoftInputMode="adjustResize" />

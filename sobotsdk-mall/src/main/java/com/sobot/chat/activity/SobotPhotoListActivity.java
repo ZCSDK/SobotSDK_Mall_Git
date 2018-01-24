@@ -34,16 +34,6 @@ public class SobotPhotoListActivity extends SobotBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(ResourceUtils.getIdByName(getApplicationContext(), "layout", "sobot_activity_photo_list"));
 
-        String bg_color = SharedPreferencesUtil.getStringData(this, "robot_current_themeColor", "");
-        if (bg_color != null && bg_color.trim().length() != 0) {
-            relative.setBackgroundColor(Color.parseColor(bg_color));
-        }
-
-        int robot_current_themeImg = SharedPreferencesUtil.getIntData(this, "robot_current_themeImg", 0);
-        if (robot_current_themeImg != 0) {
-            relative.setBackgroundResource(robot_current_themeImg);
-        }
-
         if(savedInstanceState == null){
             Intent intent = getIntent();
             pic_list = (ArrayList<ZhiChiUploadAppFileModelResult>) intent.getSerializableExtra(ZhiChiConstant.SOBOT_KEYTYPE_PIC_LIST);

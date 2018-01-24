@@ -16,24 +16,19 @@ public class ContainsEmojiEditText extends EditText {
     //是否重置了EditText的内容
     private boolean resetText;
 
-    @SuppressWarnings("unused")
-	private Context mContext;
 
     public ContainsEmojiEditText(Context context) {
         super(context);
-        this.mContext = context;
         initEditText();
     }
 
     public ContainsEmojiEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
-        this.mContext = context;
         initEditText();
     }
 
     public ContainsEmojiEditText(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        this.mContext = context;
         initEditText();
     }
 

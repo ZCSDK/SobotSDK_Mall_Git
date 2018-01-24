@@ -49,15 +49,7 @@ public class WebViewActivity extends SobotBaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(ResourceUtils.getIdByName(this, "layout",
                 "sobot_activity_webview"));
-        String bg_color = SharedPreferencesUtil.getStringData(this, "robot_current_themeColor", "");
-        if (bg_color != null && bg_color.trim().length() != 0) {
-            relative.setBackgroundColor(Color.parseColor(bg_color));
-        }
 
-        int robot_current_themeImg = SharedPreferencesUtil.getIntData(this, "robot_current_themeImg", 0);
-        if (robot_current_themeImg != 0) {
-            relative.setBackgroundResource(robot_current_themeImg);
-        }
         Drawable drawable = getResources().getDrawable(ResourceUtils.getIdByName(this, "drawable", "sobot_btn_back_selector"));
         drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
         sobot_tv_left.setCompoundDrawables(drawable, null, null, null);
@@ -234,6 +226,31 @@ public class WebViewActivity extends SobotBaseActivity {
                 }
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mWebView != null) {
+            mWebView.onResume();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        if (mWebView != null) {
+            mWebView.onPause();
+        }
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        if (mWebView != null) {
+            mWebView.removeAllViews();
+            mWebView.destroy();
+        }
+        super.onDestroy();
     }
 
     @Override

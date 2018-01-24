@@ -170,8 +170,13 @@ public class SobotPhotoActivity extends Activity implements View.OnLongClickList
 			public boolean onLongClick(View v) {
 				if (!TextUtils.isEmpty(sdCardPath) && new File(sdCardPath).exists()){
 					menuWindow = new SelectPicPopupWindow(SobotPhotoActivity.this,sdCardPath,"gif");
-					menuWindow.showAtLocation(sobot_rl_gif, Gravity.BOTTOM
-							| Gravity.CENTER_HORIZONTAL, 0, 0); // 设置layout在PopupWindow中显示的位置
+					try {
+						menuWindow.showAtLocation(sobot_rl_gif, Gravity.BOTTOM
+                                | Gravity.CENTER_HORIZONTAL, 0, 0); // 设置layout在PopupWindow中显示的位置
+					} catch (Exception e) {
+						menuWindow = null;
+//						e.printStackTrace();
+					}
 				}
 				return false;
 			}
@@ -230,6 +235,15 @@ public class SobotPhotoActivity extends Activity implements View.OnLongClickList
 			bitmap.recycle();
 			System.gc();
 		}
+		if (menuWindow != null && menuWindow.isShowing()){
+			try {
+				menuWindow.dismiss();
+			} catch (Exception e) {
+//				e.printStackTrace();
+			}
+			menuWindow = null;
+		}
+
 		MyApplication.getInstance().deleteActivity(SobotPhotoActivity.this);
 		super.onDestroy();
 	}
@@ -238,8 +252,13 @@ public class SobotPhotoActivity extends Activity implements View.OnLongClickList
 	public boolean onLongClick(View v) {
 		if (!TextUtils.isEmpty(sdCardPath) && new File(sdCardPath).exists()){
 			menuWindow = new SelectPicPopupWindow(SobotPhotoActivity.this,sdCardPath,"jpg/png");
-			menuWindow.showAtLocation(sobot_rl_gif, Gravity.BOTTOM
-					| Gravity.CENTER_HORIZONTAL, 0, 0); // 设置layout在PopupWindow中显示的位置
+			try {
+				menuWindow.showAtLocation(sobot_rl_gif, Gravity.BOTTOM
+                        | Gravity.CENTER_HORIZONTAL, 0, 0); // 设置layout在PopupWindow中显示的位置
+			} catch (Exception e) {
+//				e.printStackTrace();
+				menuWindow = null;
+			}
 		}
 		return false;
 	}
