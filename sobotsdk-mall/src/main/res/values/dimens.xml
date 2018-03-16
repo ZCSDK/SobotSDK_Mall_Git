@@ -30,4 +30,8 @@
     <dimen name="sobot_item_emoticon_size_default">32dp</dimen>
 
     <dimen name="sobot_item_qr_divider">15dp</dimen>
+
+    <dimen name="sobot_emoticon_view_indicator_margin_t">25dp</dimen>
+    <dimen name="sobot_emoticon_view_indicator_height">45dp</dimen>
+    <dimen name="sobot_emoticon_view_indicator_padding_b">10dp</dimen>
 </resources>
