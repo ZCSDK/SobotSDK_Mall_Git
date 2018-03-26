@@ -322,8 +322,14 @@
                     android:contentDescription="@null" />
             </RelativeLayout>
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dip"
+                android:layout_marginLeft="15dp"
+                android:background="@color/sobot_demo_line_1dp" />
+
             <RelativeLayout
-                android:visibility="gone"
+                android:visibility="visible"
                 android:id="@+id/rl_12"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -338,7 +344,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
                     android:gravity="center"
-                    android:text="联系客服" />
+                    android:text="消息中心" />
 
                 <ImageView
                     android:id="@+id/img_pc_right12"
@@ -350,13 +356,6 @@
                     android:background="@drawable/sobot_arrow_icon"
                     android:contentDescription="@null" />
             </RelativeLayout>
-
-            <View
-                android:visibility="gone"
-                android:layout_width="fill_parent"
-                android:layout_height="0.1dip"
-                android:layout_marginLeft="60dp"
-                android:background="@color/sobot_demo_line_1dp" />
 
         </LinearLayout>
 

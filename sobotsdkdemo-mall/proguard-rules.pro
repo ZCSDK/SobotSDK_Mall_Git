@@ -51,19 +51,10 @@
 ## ----------------------------------
 ##      OkHttp相关
 ## ----------------------------------
--keepattributes Signature
--keepattributes *Annotation*
--keep class com.squareup.okhttp3.** { *; }
--keep interface com.squareup.okhttp3.** { *; }
--dontwarn com.squareup.okhttp3.**
-
-## ----------------------------------
-##      Okio相关
-## ----------------------------------
--keep class sun.misc.Unsafe { *; }
--dontwarn java.nio.file.*
--dontwarn org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
+-dontwarn okhttp3.**
 -dontwarn okio.**
+-dontwarn javax.annotation.**
+-keepnames class okhttp3.internal.publicsuffix.PublicSuffixDatabase
 
 ## ----------------------------------
 ##      UIL相关
@@ -76,6 +67,7 @@
 ##      Glide相关
 ## ----------------------------------
 -keep class com.bumptech.glide.Glide { *; }
+-keep class com.bumptech.glide.request.RequestOptions {*;}
 -keep public class * implements com.bumptech.glide.module.GlideModule
 -keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
   **[] $VALUES;
@@ -89,3 +81,9 @@
 -keep class com.squareup.picasso.Picasso { *; }
 -dontwarn com.squareup.okhttp.**
 -dontwarn com.squareup.picasso.**
+
+## ----------------------------------
+##      demo相关
+## ----------------------------------
+-keep class com.lzy.widget.manager.** { *; }
+-dontwarn com.lzy.widget.**
