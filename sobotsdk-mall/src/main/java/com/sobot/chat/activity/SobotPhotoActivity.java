@@ -10,13 +10,12 @@ import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.sobot.chat.application.MyApplication;
 import com.sobot.chat.core.HttpUtils;
 import com.sobot.chat.core.HttpUtils.FileCallBack;
-import com.sobot.chat.utils.BitmapUtil;
+import com.sobot.chat.utils.SobotBitmapUtil;
 import com.sobot.chat.utils.LogUtils;
 import com.sobot.chat.utils.MD5Util;
 import com.sobot.chat.utils.ResourceUtils;
@@ -108,7 +107,7 @@ public class SobotPhotoActivity extends Activity implements View.OnLongClickList
 					&& (imageUrL.endsWith(".gif") || imageUrL.endsWith(".GIF"))) {
 				showGif(savePath);
 			} else {
-				bitmap = BitmapUtil.compress(savePath, getApplicationContext());
+				bitmap = SobotBitmapUtil.compress(savePath, getApplicationContext());
 				big_photo.setImageBitmap(bitmap);
 				mAttacher = new PhotoViewAttacher(big_photo);
 				mAttacher

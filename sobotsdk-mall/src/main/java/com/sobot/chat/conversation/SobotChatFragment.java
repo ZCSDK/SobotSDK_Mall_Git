@@ -102,6 +102,7 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Timer;
@@ -392,6 +393,7 @@ public class SobotChatFragment extends SobotChatBaseFragment implements View.OnC
         sobot_announcement = (RelativeLayout) rootView.findViewById(getResId("sobot_announcement"));
         sobot_announcement_right_icon = (TextView) rootView.findViewById(getResId("sobot_announcement_right_icon"));
         sobot_announcement_title = (TextView) rootView.findViewById(getResId("sobot_announcement_title"));
+        sobot_announcement_title.setSelected(true);
     }
 
     /* 处理消息 */
@@ -3087,9 +3089,10 @@ public class SobotChatFragment extends SobotChatBaseFragment implements View.OnC
             if (type == 2) {
                 doClickTransferBtn();
                 return;
-            } else if ((type == 3 || type == 4 ) && !TextUtils.isEmpty(info.getTransferKeyWord())) {
+            } else if ((type == 3 || type == 4 ) && info.getTransferKeyWord() != null) {
                 //用户可以输入关键字 进行转人工
-                if (content != null && content.equals(info.getTransferKeyWord())) {
+                HashSet<String> transferKeyWord = info.getTransferKeyWord();
+                if (!TextUtils.isEmpty(content) && transferKeyWord.contains(content)) {
                     sendTextMessageToHandler(msgId, content, handler, 1, SEND_TEXT);
                     doClickTransferBtn();
                     return;

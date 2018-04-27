@@ -791,7 +791,7 @@ public abstract class SobotChatBaseFragment extends SobotBaseFragment implements
      * @return
      */
     protected boolean isUserBlack(){
-        if("1".equals(initModel.getIsblack())){
+        if(initModel != null && "1".equals(initModel.getIsblack())){
             return true;
         }
         return false;

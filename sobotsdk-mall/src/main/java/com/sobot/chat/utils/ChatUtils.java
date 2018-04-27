@@ -190,7 +190,7 @@ public class ChatUtils {
 										  Handler handler, Context context, final ListView lv_message,
 										  final SobotMsgAdapter messageAdapter) {
 
-		Bitmap bitmap = BitmapUtil.compress(filePath,context);
+		Bitmap bitmap = SobotBitmapUtil.compress(filePath,context);
 		if(bitmap!=null){
 			String realFilePath = filePath;
 			int degree = ImageUtils.readPictureDegree(filePath);
@@ -616,7 +616,7 @@ public class ChatUtils {
 
 	public static void sendPicByFilePath(Context context,String filePath,SobotSendFileListener listener) {
 
-		Bitmap bitmap = BitmapUtil.compress(filePath,context);
+		Bitmap bitmap = SobotBitmapUtil.compress(filePath,context);
 		if(bitmap!=null){
 			int degree = ImageUtils.readPictureDegree(filePath);
 			bitmap = ImageUtils.rotateBitmap(bitmap, degree);

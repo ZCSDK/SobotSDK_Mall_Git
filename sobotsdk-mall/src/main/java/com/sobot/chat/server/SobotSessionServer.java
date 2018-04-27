@@ -340,6 +340,7 @@ public class SobotSessionServer extends Service {
 
     private boolean isNeedShowMessage(String appkey) {
         String currentAppid = SharedPreferencesUtil.getStringData(getApplicationContext(), ZhiChiConstant.SOBOT_CURRENT_IM_APPID, "");
-        return !currentAppid.equals(appkey);
+        return !currentAppid.equals(appkey) || (!CommonUtils.getRunningActivityName(getApplicationContext()).contains(
+                "SobotChatActivity")|| !CommonUtils.isBackground(getApplicationContext()) || CommonUtils.isScreenLock(getApplicationContext()));
     }
 }

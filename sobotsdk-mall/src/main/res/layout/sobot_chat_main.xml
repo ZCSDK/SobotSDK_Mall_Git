@@ -44,8 +44,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_toLeftOf="@+id/sobot_announcement_right_icon"
                 android:layout_toRightOf="@+id/sobot_announcement_icon"
-                android:ellipsize="end"
-                android:maxLines="1"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="@color/sobot_announcement_title_color"
+                android:marqueeRepeatLimit="marquee_forever"
                 android:textSize="15sp" />
 
             <!--通告右边的箭头-->

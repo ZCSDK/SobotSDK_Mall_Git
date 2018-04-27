@@ -10,6 +10,7 @@ import com.sobot.chat.api.model.Information;
 import com.sobot.chat.utils.ToastUtil;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
@@ -107,8 +108,16 @@ public class SobotUtils {
         if (!TextUtils.isEmpty(SobotSPUtil.getStringData(context, "sobot_show_history_ruler", ""))) {
             sobot_show_history_ruler = Long.parseLong(SobotSPUtil.getStringData(context, "sobot_show_history_ruler", ""));
         }
-        if (!TextUtils.isEmpty(SobotSPUtil.getStringData(context, "sobot_transferKeyWord", ""))) {
-            info.setTransferKeyWord(SobotSPUtil.getStringData(context, "sobot_transferKeyWord", ""));
+        String transferKey = SobotSPUtil.getStringData(context, "sobot_transferKeyWord", "");
+        if (!TextUtils.isEmpty(transferKey)) {
+            String[] transferKeys =  transferKey.split(",");
+            if (transferKeys.length > 0){
+                HashSet<String> tmpSet = new HashSet<>();
+                for (int i = 0; i < transferKeys.length; i++) {
+                    tmpSet.add(transferKeys[i]);
+                }
+                info.setTransferKeyWord(tmpSet);//设置转人工关键字
+            }
         }
         //启动参数设置结束
 

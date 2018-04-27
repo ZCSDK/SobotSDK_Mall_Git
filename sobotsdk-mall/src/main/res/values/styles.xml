@@ -39,6 +39,7 @@
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowBackground">@null</item>
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
     </style>
 
     <style name="AnimBottom" parent="@android:style/Animation">
