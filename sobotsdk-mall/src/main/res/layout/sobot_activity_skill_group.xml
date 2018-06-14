@@ -22,23 +22,7 @@
 
         <GridView
             android:id="@+id/sobot_gv_skill"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="#F5F5F5"
-            android:cacheColorHint="@android:color/transparent"
-            android:fadingEdge="none"
-            android:horizontalSpacing="10dp"
-            android:listSelector="@null"
-            android:numColumns="2"
-            android:overScrollMode="never"
-            android:scrollbarThumbVertical="@drawable/sobot_skill_group_scroll_img"
-            android:scrollbars="vertical"
-            android:stretchMode="columnWidth"
-            android:verticalSpacing="0dp" />
+            style="@style/sobot_grid_view" />
 
         <View
             android:layout_width="fill_parent"

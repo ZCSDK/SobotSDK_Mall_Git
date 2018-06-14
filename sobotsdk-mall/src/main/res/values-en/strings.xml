@@ -8,7 +8,7 @@
     <string name="sobot_button_send">Send</string>
     <string name="sobot_attach_take_pic">Camera</string>
     <string name="sobot_btn_submit_text">Submit feedback</string>
-    <string name="sobot_please">SOBOT SDK  2.5.5</string>
+    <string name="sobot_please">SOBOT SDK  2.6.0</string>
     <string name="sobot_move_up_to_cancel">Slide up to cancel</string>
     <string name="sobot_release_to_cancel">Slide up to cancel</string>
     <string name="sobot_up_send_calcel">Slide up to cancel</string>
@@ -119,4 +119,7 @@
     <string name="sobot_consultation_list">Message center</string>
     <string name="sobot_more">More</string>
     <string name="sobot_collapse">Collapse</string>
+    <string name="sobot_switch_business">Switch business</string>
+    <string name="sobot_switch_robot_title">Select the business to consult</string>
+    <string name="sobot_retracted_msg_tip">Customer service %1$s withdrew a message</string>
 </resources>

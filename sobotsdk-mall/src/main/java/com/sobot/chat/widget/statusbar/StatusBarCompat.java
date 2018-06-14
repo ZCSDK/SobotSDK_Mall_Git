@@ -30,7 +30,7 @@ public class StatusBarCompat {
     static final IStatusBar IMPL;
 
     static {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !isMeizu()) {
             IMPL = new StatusBarMImpl();
         } /*else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && !isEMUI()) {
             IMPL = new StatusBarLollipopImpl();
@@ -67,6 +67,10 @@ public class StatusBarCompat {
             return properties.containsKey("ro.build.hw_emui_api_level");
         }
         return false;
+    }
+
+    private static boolean isMeizu() {
+        return Build.DISPLAY.startsWith("Flyme");
     }
 
     public static void setStatusBarColor(Activity activity, @ColorInt int color) {

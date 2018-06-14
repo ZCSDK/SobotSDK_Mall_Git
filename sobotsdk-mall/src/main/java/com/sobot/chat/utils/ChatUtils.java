@@ -40,6 +40,7 @@ import com.sobot.chat.core.channel.SobotMsgManager;
 import com.sobot.chat.core.http.callback.StringResultCallBack;
 import com.sobot.chat.viewHolder.ImageMessageHolder;
 import com.sobot.chat.widget.dialog.SobotEvaluateDialog;
+import com.sobot.chat.widget.dialog.SobotRobotListDialog;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -430,6 +431,22 @@ public class ChatUtils {
 		}
 
 		SobotEvaluateDialog dialog = new SobotEvaluateDialog(context, isFinish,initModel,current_model,commentType, customName, scroe);
+		dialog.setCanceledOnTouchOutside(true);
+		dialog.show();
+		return dialog;
+	}
+
+	/**
+	 * 打开机器人切换列表
+	 * @param context
+	 * @param initMode 初始化对象
+	 */
+	public static SobotRobotListDialog showRobotListDialog(Activity context , ZhiChiInitModeBase initMode,SobotRobotListDialog.SobotRobotListListener listener){
+		if(context == null || initMode == null || listener == null){
+			return null;
+		}
+
+		SobotRobotListDialog dialog = new SobotRobotListDialog(context, initMode.getUid(),initMode.getCurrentRobotFlag(),listener);
 		dialog.setCanceledOnTouchOutside(true);
 		dialog.show();
 		return dialog;

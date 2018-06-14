@@ -214,4 +214,24 @@
         <item name="android:visibility">gone</item>
     </style>
 
+    <style name="sobot_grid_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#F5F5F5</item>
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:horizontalSpacing">10dp</item>
+        <item name="android:listSelector">@null</item>
+        <item name="android:numColumns">2</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:scrollbarThumbVertical">@drawable/sobot_skill_group_scroll_img</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:stretchMode">columnWidth</item>
+        <item name="android:verticalSpacing">0dp</item>
+    </style>
+
 </resources>
