@@ -291,6 +291,7 @@ public class SobotChatFragment extends SobotChatBaseFragment implements View.OnC
     @Override
     public void onResume() {
         super.onResume();
+        SharedPreferencesUtil.saveStringData(mAppContext, ZhiChiConstant.SOBOT_CURRENT_IM_APPID, info.getAppkey());
         SobotMsgManager.getInstance(mAppContext).getConfig(info.getAppkey()).clearCache();
     }
 
@@ -421,9 +422,9 @@ public class SobotChatFragment extends SobotChatBaseFragment implements View.OnC
         sobot_announcement_title = (TextView) rootView.findViewById(getResId("sobot_announcement_title"));
         sobot_announcement_title.setSelected(true);
 
-        sobot_custom_menu = rootView.findViewById(getResId("sobot_custom_menu"));
+        sobot_custom_menu = (HorizontalScrollView) rootView.findViewById(getResId("sobot_custom_menu"));
         sobot_custom_menu.setVisibility(View.GONE);
-        sobot_custom_menu_linearlayout = rootView.findViewById(getResId("sobot_custom_menu_linearlayout"));
+        sobot_custom_menu_linearlayout = (LinearLayout) rootView.findViewById(getResId("sobot_custom_menu_linearlayout"));
     }
 
     /* 处理消息 */
@@ -431,7 +432,7 @@ public class SobotChatFragment extends SobotChatBaseFragment implements View.OnC
     public Handler handler = new Handler() {
 
         @SuppressWarnings("unchecked")
-        public void handleMessage(final android.os.Message msg) {
+        public void handleMessage(final Message msg) {
             if (!isActive()) {
                 return;
             }
@@ -1529,17 +1530,6 @@ public class SobotChatFragment extends SobotChatBaseFragment implements View.OnC
                 lv_message.setSelection(messageAdapter.getCount());
             }
         });
-    }
-
-    private void deleteUnReadUi(){
-        //清除“以下为未读消息”
-        for (int i = messageList.size() - 1; i >= 0; i--) {
-            if (messageList.get(i).getAnswer() != null && ZhiChiConstant
-                    .sobot_remind_type_below_unread == messageList.get(i).getAnswer().getRemindType()) {
-                messageList.remove(i);
-                break;
-            }
-        }
     }
 
     /**
@@ -2998,8 +2988,6 @@ public class SobotChatFragment extends SobotChatBaseFragment implements View.OnC
 
     //保存当前的数据，进行会话保持
     private void saveCache() {
-        //清除“以下为未读消息”
-        deleteUnReadUi();
         ZhiChiConfig config = SobotMsgManager.getInstance(mAppContext).getConfig(info.getAppkey());
         config.isShowUnreadUi = true;
         config.setMessageList(messageList);
