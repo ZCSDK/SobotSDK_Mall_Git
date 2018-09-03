@@ -37,7 +37,7 @@ dependencies {
 
     //以下三项必填
     compile project(':sobotsdk-mall')
-//    compile 'com.sobot.chat:sobotsdk-mall:2.6.1'
+//    compile 'com.sobot.chat:sobotsdk-mall:2.6.4'
 
     compile 'com.squareup.okhttp3:okhttp:3.8.0'
 
