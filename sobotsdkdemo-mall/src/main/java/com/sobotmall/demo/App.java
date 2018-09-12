@@ -29,7 +29,7 @@ public class App extends Application {
             appkey = "07a5ff1050c047c4b9d3c57eeb7ced29";
         }
         SobotApi.initSobotSDK(this, appkey, SobotSPUtil.getStringData(this, "sobot_partnerId", ""));
-        SobotApi.initPlatformUnion(this, "1001");
+        SobotApi.initPlatformUnion(this, "1001", "");
 //        initUi();
 //        customMenu();
     }
