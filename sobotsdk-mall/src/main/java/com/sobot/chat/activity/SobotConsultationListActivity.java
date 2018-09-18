@@ -139,12 +139,13 @@ public class SobotConsultationListActivity extends SobotBaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SobotMsgCenterModel sobotMsgCenterModel = datas.get(position);
-                if (SobotOption.sobotConversationListCallback != null && !TextUtils.isEmpty(sobotMsgCenterModel.getAppkey())) {
-                    SobotOption.sobotConversationListCallback.onConversationInit(sobotMsgCenterModel.getAppkey());
-                    return;
-                }
                 Information info = sobotMsgCenterModel.getInfo();
                 if (info != null) {
+                    info.setUid(currentUid);
+                    if (SobotOption.sobotConversationListCallback != null && !TextUtils.isEmpty(sobotMsgCenterModel.getAppkey())) {
+                        SobotOption.sobotConversationListCallback.onConversationInit(getApplicationContext(),info);
+                        return;
+                    }
                     SobotApi.startSobotChat(getApplicationContext(), info);
                 }
             }
