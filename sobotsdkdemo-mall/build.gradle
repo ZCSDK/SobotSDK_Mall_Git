@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '26.0.2'
+
     // 签名配置
     signingConfigs {
 
@@ -33,22 +33,22 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //以下三项必填
-    compile project(':sobotsdk-mall')
-//    compile 'com.sobot.chat:sobotsdk-mall:2.6.7'
+//    implementation project(':sobotsdk-mall')
+    implementation 'com.sobot.chat:sobotsdk:2.6.8'
 
-    compile 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
 
     //目前支持常⻅的3种图片加载库，必须在下面的图片加载库中选择一个添加依赖
     // compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     // compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
 
-    compile 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:appcompat-v7:25.3.1'
     //AlphaIndicatorView
-    compile('com.lzy.widget:view-core:0.1.5') {
+    implementation ('com.lzy.widget:view-core:0.1.5') {
         exclude group: 'com.android.support'
     }
 }
