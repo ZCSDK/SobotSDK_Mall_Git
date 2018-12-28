@@ -1,17 +1,22 @@
 package com.sobotmall.demo;
 
 import android.app.Application;
+import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 
 import com.sobot.chat.SobotApi;
 import com.sobot.chat.SobotUIConfig;
+import com.sobot.chat.api.model.SobotLocationModel;
 import com.sobot.chat.listener.SobotPlusMenuListener;
-import com.sobot.chat.utils.LogUtils;
+import com.sobot.chat.utils.ResourceUtils;
 import com.sobot.chat.utils.ToastUtil;
+import com.sobot.chat.api.apiUtils.SobotBaseUrl;
 import com.sobot.chat.widget.kpswitch.view.ChattingPanelUploadView;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -23,15 +28,13 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        LogUtils.isDebug = true;
-        String appkey = SobotSPUtil.getStringData(this, "sobot_appkey", "");
-        if (TextUtils.isEmpty(appkey)) {
-            appkey = "07a5ff1050c047c4b9d3c57eeb7ced29";
-        }
+//        SobotBaseUrl.setHost("https://ten.sobot.com");
+        String appkey = "07a5ff1050c047c4b9d3c57eeb7ced29";
         SobotApi.initSobotSDK(this, appkey, SobotSPUtil.getStringData(this, "sobot_partnerId", ""));
-        SobotApi.initPlatformUnion(this, "1001", "");
+        SobotApi.initPlatformUnion(this, SobotSPUtil.getStringData(this, "sobot_platformunion_value", ""), "");
 //        initUi();
 //        customMenu();
+        initLocationModule();
     }
 
     //自定义UI
@@ -62,6 +65,36 @@ public class App extends Application {
             @Override
             public void onClick(View view, String action) {
                 ToastUtil.showToast(getApplicationContext(), "action:"+action);
+            }
+        };
+    }
+
+    //设置位置功能
+    private void initLocationModule() {
+        final String ACTION_LOCATION = "sobot_action_location";
+        IOUtils.copyAssetAndWrite(getApplicationContext(), "tmp_pic.jpg");
+        //位置
+        ChattingPanelUploadView.SobotPlusEntity locationEntity = new ChattingPanelUploadView.SobotPlusEntity(ResourceUtils.getDrawableId(getApplicationContext(), "sobot_location_btn_selector"), ResourceUtils.getResString(getApplicationContext(), "sobot_location"), ACTION_LOCATION);
+        List<ChattingPanelUploadView.SobotPlusEntity> tmpList = new ArrayList<>();
+        tmpList.add(locationEntity);
+        SobotUIConfig.pulsMenu.operatorMenus = tmpList;
+        SobotUIConfig.pulsMenu.sSobotPlusMenuListener = new SobotPlusMenuListener() {
+            @Override
+            public void onClick(View view, String action) {
+                if (ACTION_LOCATION.equals(action)) {
+                    Context context = view.getContext();
+                    SobotLocationModel locationData = new SobotLocationModel();
+                    //必须传入本地图片地址
+                    locationData.setSnapshot(context.getCacheDir() + File.separator + "tmp_pic.jpg");
+                    locationData.setLat("40.001630");
+                    locationData.setLng("116.353313");
+                    locationData.setLocalName("云景四季餐厅");
+                    locationData.setLocalLabel("学清路38号金码大厦A座23层");
+
+                    SobotApi.sendLocation(context, locationData);
+
+//					view.getContext().startActivity(new Intent(view.getContext(),));
+                }
             }
         };
     }

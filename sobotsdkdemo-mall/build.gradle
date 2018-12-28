@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
 
     // 签名配置
     signingConfigs {
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 11
+        minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -36,8 +36,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //以下三项必填
-//    implementation project(':sobotsdk-mall')
-    implementation 'com.sobot.chat:sobotsdk:2.6.8'
+    implementation project(':sobotsdk-mall')
+//    implementation 'com.sobot.chat:sobotsdk:2.7.0'
 
     implementation 'com.squareup.okhttp3:okhttp:3.8.0'
 
@@ -46,7 +46,7 @@ dependencies {
     // compile 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.github.bumptech.glide:glide:3.8.0'
 
-    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
     //AlphaIndicatorView
     implementation ('com.lzy.widget:view-core:0.1.5') {
         exclude group: 'com.android.support'

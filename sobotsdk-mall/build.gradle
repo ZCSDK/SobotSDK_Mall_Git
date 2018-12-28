@@ -4,7 +4,10 @@ android {
     compileSdkVersion 26
 
     defaultConfig {
-        minSdkVersion 11
+        minSdkVersion 14
+    }
+	libraryVariants.all {
+        it.generateBuildConfig.enabled = false
     }
 }
 

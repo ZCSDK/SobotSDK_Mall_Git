@@ -22,7 +22,7 @@
         android:layout_width="fill_parent"
         android:layout_height="35dp"
         android:background="@color/sobot_btn_text_color"
-        android:hint="请输入appkey(必须)"
+        android:hint="请输入appkey"
         android:inputType="text"
         android:paddingLeft="16sp"
         android:text=""
@@ -46,6 +46,58 @@
         android:layout_below="@+id/sobot_appkey"
         android:background="@color/sobot_btn_text_color"
         android:hint="请输入partnerId(用户唯一标识，建议必填)"
+        android:inputType="text"
+        android:paddingLeft="16sp"
+        android:textColor="@color/sobot_edittext_text_color"
+        android:textColorHint="#888888"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/sobot_platformunion"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/sobot_appkey"
+        android:background="@color/sobot_btn_text_color"
+        android:hint="请输入平台id"
+        android:inputType="text"
+        android:paddingLeft="16sp"
+        android:textColor="@color/sobot_edittext_text_color"
+        android:textColorHint="#888888"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/sobot_customerCode"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/sobot_appkey"
+        android:background="@color/sobot_btn_text_color"
+        android:hint="请输入customerCode"
+        android:inputType="text"
+        android:paddingLeft="16sp"
+        android:textColor="@color/sobot_edittext_text_color"
+        android:textColorHint="#888888"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/sobot_flowCompanyId"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/sobot_appkey"
+        android:background="@color/sobot_btn_text_color"
+        android:hint="请输入溢出公司id"
+        android:inputType="text"
+        android:paddingLeft="16sp"
+        android:textColor="@color/sobot_edittext_text_color"
+        android:textColorHint="#888888"
+        android:visibility="visible" />
+
+    <EditText
+        android:id="@+id/sobot_flowGroupId"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/sobot_appkey"
+        android:background="@color/sobot_btn_text_color"
+        android:hint="请输入溢出公司技能组id"
         android:inputType="text"
         android:paddingLeft="16sp"
         android:textColor="@color/sobot_edittext_text_color"

@@ -21,7 +21,7 @@
 
             <View style="@style/custom_full_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_tel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,7 +35,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_uName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_realName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_qq"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_face"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_reMark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -115,7 +115,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_visitTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_visitUrl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_key1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -157,7 +157,7 @@
 
             <View style="@style/custom_short_divide_line" />
 
-            <com.sobot.demo.SettingItemView
+            <com.sobotmall.demo.SettingItemView
                 android:id="@+id/sobot_person_key2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

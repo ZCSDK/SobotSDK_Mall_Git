@@ -143,20 +143,23 @@ public class SobotUtils {
         }
 
         String appkey = SobotSPUtil.getStringData(context, "sobot_appkey", "");
-        if (!TextUtils.isEmpty(appkey)) {
-            info.setAppkey(appkey);
+        String customerCode = SobotSPUtil.getStringData(context, "sobot_customerCode_value", "");
 
-            //设置标题显示模式
-            SobotApi.setChatTitleDisplayMode(context,
-                    SobotChatTitleDisplayMode.values()[enumType], sobot_title_vlaue);
-            //设置是否开启消息提醒
-            SobotApi.setNotificationFlag(context, sobot_isOpenNotification
-                    , R.drawable.sobot_demo_logo_small_icon, R.drawable.sobot_demo_logo);
-            SobotApi.hideHistoryMsg(context, sobot_show_history_ruler);
-            SobotApi.setEvaluationCompletedExit(context, sobot_evaluationCompletedExit);
-            SobotApi.startSobotChat(context, info);
-        } else {
-            ToastUtil.showToast(context, "AppKey 不能为空 ！！！");
-        }
+        info.setCustomerCode(customerCode);
+        info.setAppkey(appkey);
+
+        //设置标题显示模式
+        SobotApi.setChatTitleDisplayMode(context,
+                SobotChatTitleDisplayMode.values()[enumType], sobot_title_vlaue);
+        //设置是否开启消息提醒
+        SobotApi.setNotificationFlag(context, sobot_isOpenNotification
+                , R.drawable.sobot_demo_logo_small_icon, R.drawable.sobot_demo_logo);
+        SobotApi.hideHistoryMsg(context, sobot_show_history_ruler);
+        String sobot_flowCompanyId_value = SobotSPUtil.getStringData(context, "sobot_flowCompanyId_value", "");
+        String sobot_flowGroupId_value = SobotSPUtil.getStringData(context, "sobot_flowGroupId_value", "");
+        SobotApi.setFlowCompanyId(context,sobot_flowCompanyId_value);
+        SobotApi.setFlowGroupId(context, sobot_flowGroupId_value);
+        SobotApi.setEvaluationCompletedExit(context, sobot_evaluationCompletedExit);
+        SobotApi.startSobotChat(context, info);
     }
 }
